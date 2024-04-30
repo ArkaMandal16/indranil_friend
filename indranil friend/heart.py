@@ -51,6 +51,26 @@ plt.figure(figsize=(8,6))
 sns.barplot(x='cp', y='target', data=heart, palette='pastel')
 plt.title('Relation b/w Chest Pain and Target')
 plt.show()
+# Data analysis between cholesterol and target i.e chance of heart disease
+print(heart['chol'].unique())
+
+sns.set_style('whitegrid')
+
+plt.figure(figsize=(8,6))
+sns.barplot(x='chol', y='target', data=heart, palette='pastel')
+plt.title('Relation b/w Cholesterol and Target')
+plt.show()
+
+# Data analysis between fasting blood pressure(fbs) and target i.e chance of heart disease
+print(heart['fbs'].unique())
+
+sns.set_style('whitegrid')
+
+plt.figure(figsize=(8,6))
+sns.barplot(x='fbs', y='target', data=heart, palette='pastel')
+plt.title('Relation b/w Fasting blood pressure and Target')
+plt.show()
+
 #get correlations of each features in heartset
 corrmat = heart.corr()
 top_corr_features = corrmat.index
